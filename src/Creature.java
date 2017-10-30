@@ -10,6 +10,11 @@ public class Creature {
     public String checkStatus() {
         String status = "";
 
+        if (this.happiness <= 0 || this.energy <= 0 || this.fullness <= 0) {
+            System.out.println("Oh no! " + this.getName() + " has died. You're a terrible owner!");
+            System.exit(0);
+        }
+
         if (this.happiness <= 6) {
             status += "Oh, " + this.getName() + " is feeling sad!" + System.lineSeparator();
         }
