@@ -1,7 +1,7 @@
 public class Creature {
 
-    int energy = 15, fullness = 15, happiness = 15;
-    String name;
+    private int energy = 15, fullness = 15, happiness = 15;
+    private String name = null;
 
     public Creature(String name) {
         this.name = name;
@@ -12,7 +12,7 @@ public class Creature {
 
         if (this.happiness <= 0 || this.energy <= 0 || this.fullness <= 0) {
             System.out.println("Oh no! " + this.getName() + " has died. You're a terrible owner!");
-            System.exit(0);
+            return null;
         }
 
         if (this.happiness <= 6) {
